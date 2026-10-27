@@ -1,0 +1,26 @@
+CALCULADORA JUAN — ASP.NET Web Forms / C# / .NET Framework 4.8
+
+1. Extraer el ZIP y abrir CalculadoraJuan.sln en Visual Studio.
+2. Tener instalada la carga de trabajo «Desarrollo de ASP.NET y web»
+   y el paquete de destino de .NET Framework 4.8.
+3. Seleccionar IIS Express y Google Chrome en la lista junto al botón de ejecutar.
+4. Presionar F5 o el botón verde Iniciar. En algunos teclados se usa Fn + F5.
+   Default.aspx ya está configurada como página de inicio en el archivo
+   CalculadoraJuan.csproj.user incluido. La raíz del sitio también abre
+   Default.aspx mediante Web.config.
+
+Si el puerto 51234 está ocupado por otra ejecución de esta calculadora,
+detener esa ejecución antes de iniciar la nueva. No ejecutar simultáneamente
+varias copias del proyecto. Visual Studio crea su configuración local de IIS
+Express al abrir el proyecto; el ZIP no incluye rutas absolutas del equipo.
+
+Ingresar números usando los botones. Para +, −, × y ÷, seleccionar la
+operación, ingresar el segundo número y pulsar =. Las otras tres funciones
+se aplican inmediatamente al número mostrado. C limpia todo y ⌫ borra
+el último carácter de la entrada actual. Un número después de un resultado
+inicia una entrada nueva. Las operaciones encadenadas se resuelven de
+izquierda a derecha. exp significa e elevado al número mostrado.
+
+Default.aspx.cs contiene todos los cálculos y eventos. ViewState conserva
+el primer número, la operación y el estado de entrada entre clics.
+No se necesitan paquetes NuGet ni bases de datos.
